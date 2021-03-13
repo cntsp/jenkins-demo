@@ -27,11 +27,11 @@ node('haimaxy-jnlp') {
             id: 'userInput',
             message: 'Choose a deploy environment',
             parameters: [
-                
+                [
                     $class: 'ChoiceParameterDefinition',
                     choices: "Dev\nQA\nProd",
-                    name: 'Env'
-                
+                    name: 'Env',
+                ]
             ]
         )
         echo "This is a deploy step to ${userInput}"
