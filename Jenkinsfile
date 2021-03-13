@@ -29,7 +29,7 @@ node('haimaxy-jnlp') {
             parameters: [
                 [
                     $class: 'ChoiceParameterDefinition',
-                    choices: "Dev\nQA\nProd"
+                    choices: "Dev\nQA\nProd",
                     name: 'Env'
                 ]
             ]
