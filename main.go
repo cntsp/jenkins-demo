@@ -3,10 +3,12 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"os"
 )
 
 func hello(c *gin.Context) {
-	c.HTML(http.StatusOK,"index.html", nil)
+	branch_name := os.Getenv("branch")
+	c.HTML(http.StatusOK,"index.html", branch_name)
 }
 
 func main() {
